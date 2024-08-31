@@ -1,34 +1,228 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>church</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Supherhero">
-    <meta name="keywords" content="programming hero,learn programming">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Victor Mulinge Muendo!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000; /* Dark background for particles to stand out */
+            color: #fff; /* White text for readability */
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgba(74, 144, 226, 0.8);
+            padding: 15px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            nav ul {
+                flex-direction: column;
+                background-color: rgba(74, 144, 226, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                display: none;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+        .show-menu {
+            display: flex !important;
+        }
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 10; /* Ensures content is above particles */
+        }
+        .section h2 {
+            color: #ffdf00; /* Bright yellow color for titles */
+        }
+        .section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .contact-details {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .contact-item {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        .contact-item i {
+            margin-right: 10px;
+            color: #4a90e2;
+        }
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-images img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    <!--custom css-->
-    <link rel="stylesheet" href="css/style.css">
+        /* 3D Particles CSS */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 1; /* Behind all content */
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #ffdf00; /* Yellow color for particles */
+            border-radius: 50%;
+            box-shadow: 0 0 8px #ffdf00;
+            animation: float 10s infinite linear;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="app">
-    <h3>Hello World</h3>
 
-  <div class="hamburger-icon">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>  
+<!-- Particles Container -->
+<div id="particles"></div>
 
-</div>
+<header>
+    <h1>Happy Birthday, Victor Mulinge Muendo!</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#wishes">Wishes</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
+<section class="section" id="intro">
+    <h2>Welcome to My Birthday Page!</h2>
+    <p>Happy Birthday to Me! This page is dedicated to celebrating my special day with heartfelt wishes, memories, and lots of love. Join me at General Muendo Restaurant to enjoy every moment and make it memorable!</p>
+</section>
 
+<section class="section" id="wishes">
+    <h2>Birthday Wishes</h2>
+    <p>Thank you to everyone who has sent me warm wishes and blessings. I'm grateful for all the love and support from my friends and family. Your kind words mean the world to me!</p>
+    <p>Let's make this day filled with happiness, laughter, and everything we love. Cheers to another year of adventures and joy!</p>
+</section>
 
+<section class="section" id="gallery">
+    <h2>Memory Gallery</h2>
+    <p>Here are some cherished moments that capture my joyful spirit and the wonderful memories shared with loved ones:</p>
+    <div class="gallery-images">
+        <img src="victor.jpg" alt="Memory 1">
+        <img src="victor1.jpg" alt="Memory 2">
+        <img src="victor2.jpg" alt="Memory 3">
+        <img src="victor3.jpg" alt="Memory 4">
+    </div>
+</section>
 
+<section class="section" id="contact">
+    <h2>Send Me Your Wishes</h2>
+    <div class="contact-details">
+        <div class="contact-item"><i class="fas fa-phone"></i>Phone: 0758538836</div>
+        <div class="contact-item"><i class="fas fa-envelope"></i>Email: victormulinge92@gmail.com</div>
+        <div class="contact-item"><i class="fab fa-whatsapp"></i>WhatsApp: 0758538836</div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i>Location: General Muendo Restaurant</div>
+    </div>
+</section>
 
-<!--main js-->
-<script src="js/main.js"></script>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('nav-menu');
+        menu.classList.toggle('show-menu');
+    }
+
+    // Generate particles
+    const particlesContainer = document.getElementById('particles');
+    const numberOfParticles = 100; // Number of particles
+
+    for (let i = 0; i < numberOfParticles; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        particle.style.top = Math.random() * 100 + 'vh';  // Random vertical position
+        particle.style.animationDuration = 5 + Math.random() * 5 + 's'; // Random speed
+        particlesContainer.appendChild(particle);
+    }
+</script>
+
 </body>
 </html>
